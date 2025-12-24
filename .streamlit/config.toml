@@ -1,0 +1,11 @@
+[theme]
+primaryColor = "#2E8B57"         # The main PQNK Green
+backgroundColor = "#FFFFFF"      # White background
+secondaryBackgroundColor = "#F0FDF4" # Very light green for sidebars/inputs
+textColor = "#333333"            # Dark grey text for readability
+font = "sans serif"              # Matches the clean font in the video
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = false
