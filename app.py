@@ -188,9 +188,22 @@ if current_page == "home":
     render("""<style>section[data-testid="stSidebar"] {display: none;}</style>""", unsafe_allow_html=True)
     
     render("""
-    <div class="nav-header"><div class="nav-logo"><span>🌱</span> PQNK Farming AI</div><div class="nav-links"><a href="/?page=about" style="text-decoration:none; color:#555; font-weight:bold;">About Us</a> &nbsp;&nbsp; 🟢 Revolutionizing Agriculture</div></div>
+    <div class="nav-header"><div class="nav-logo"><span>🌱</span> PQNK Farming AI</div><div class="nav-links"><a href="/?page=about" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">About Us</a> &nbsp;&nbsp; 🟢 Revolutionizing Agriculture</div></div>
     <div class="hero-section"><div class="mission-badge">Revolutionizing Agriculture with AI</div><div class="hero-title">The Future of Farming Intelligence</div><div class="hero-subtitle">PQNK Farming AI combines cutting-edge AI with agricultural expertise.</div></div>
     """, unsafe_allow_html=True)
+    
+    render("<h2 style='text-align: center; color: #333; margin-top: 20px;'>Our Mission</h2>", unsafe_allow_html=True)
+    render("<p style='text-align: center; max-width: 700px; margin: 0 auto; color: #666;'>To democratize access to advanced agricultural knowledge and empower farmers worldwide.</p>", unsafe_allow_html=True)
+
+    render("<br><br>", unsafe_allow_html=True)
+    render("<h2 style='text-align: center; color: #333;'>Meet The Team</h2>", unsafe_allow_html=True)
+    
+    t1, t2, t3 = st.columns(3)
+    with t1: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍⚕️</div><h3 style="color:#333;">Dr. Mansoor Ebrahim</h3></div>""", unsafe_allow_html=True)
+    with t2: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍💻</div><h3 style="color:#333;">Muzammil Yasir</h3></div>""", unsafe_allow_html=True)
+    with t3: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍💼</div><h3 style="color:#333;">Muhammad Hussain</h3></div>""", unsafe_allow_html=True)
+
+    render("<br><br>", unsafe_allow_html=True)
 
     c1, c2, c3 = st.columns(3)
     with c1: render("""<div class="hover-card"><div style="font-size:2rem; margin-bottom:10px">🧠</div><h3>AI & ML</h3><p style="color:#666;">Advanced RAG systems.</p></div>""", unsafe_allow_html=True)
@@ -217,7 +230,7 @@ elif current_page == "about":
     render("""
     <div class="nav-header">
         <div class="nav-logo"><span>🌱</span> PQNK Farming AI</div>
-        <div class="nav-links"><a href="/?page=home" style="text-decoration:none; color:#555; font-weight:bold;">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/?page=chat" style="text-decoration:none; color:#555; font-weight:bold;">Chatbot</a></div>
+        <div class="nav-links"><a href="/?page=home" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/?page=chat" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">Chatbot</a></div>
     </div>
     """, unsafe_allow_html=True)
     
