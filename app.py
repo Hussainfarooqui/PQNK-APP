@@ -314,7 +314,7 @@ elif current_page == "chat":
                                [{"role": m["role"], "content": m["content"]} for m in history_to_send]
                     
                     stream = client.chat.completions.create(
-                        model="llama-3.1-8b-instant", 
+                        model = "llama3-8b-8192", 
                         messages=api_msgs, 
                         stream=True
                     )
