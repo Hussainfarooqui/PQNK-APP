@@ -91,36 +91,38 @@ render("""
     /* Navbar Styling */
     .nav-header { 
         display: flex; justify-content: space-between; align-items: center; 
-        padding: 15px 0; border-bottom: 2px solid #f0f0f0; margin-bottom: 30px; 
+        padding: 15px 20px; border-bottom: 2px solid #f0f0f0; margin-bottom: 30px; 
     }
     .nav-logo { font-size: 1.8rem; font-weight: 800; color: #2E8B57; display: flex; align-items: center; gap: 10px; }
-    .nav-links { color: #555; font-size: 1rem; font-weight: 500; }
+    .nav-links { color: #555; font-size: 1rem; font-weight: 500; display: flex; gap: 15px; align-items: center; }
     
     /* Hero Section */
     .hero-section { text-align: center; padding: 40px 20px; background-color: white; }
-    .hero-title { color: #2E8B57; font-size: 3.2rem; font-weight: 800; margin-bottom: 10px; }
-    .hero-subtitle { color: #666; font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+    .hero-title { color: #2E8B57; font-size: 3.2rem; font-weight: 800; margin-bottom: 10px; line-height: 1.2; }
+    .hero-subtitle { color: #666; font-size: 1.2rem; max-width: 700px; margin: 0 auto; line-height: 1.5; }
     .mission-badge { background-color: #e6f4ea; color: #2E8B57; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; display: inline-block; margin-bottom: 15px; }
 
     /* Cards */
-    .hover-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #2E8B57; height: 100%; transition: transform 0.3s ease; }
+    .hover-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #2E8B57; height: 100%; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; }
     .hover-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
     
     /* Team & Testimonials */
     .testimonial-img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid #2E8B57; }
     .team-avatar { width: 90px; height: 90px; border-radius: 50%; background-color: #eee; margin: 0 auto 15px auto; object-fit: cover; }
-    .cta-container { background-color: #2E8B57; border-radius: 20px; padding: 50px; text-align: center; color: white; margin-top: 60px; margin-bottom: 40px; }
+    .cta-container { background-color: #2E8B57; border-radius: 20px; padding: 50px 20px; text-align: center; color: white; margin-top: 60px; margin-bottom: 40px; }
 
     /* --- CHAT SPECIFIC STYLES --- */
     .block-container {
-        padding-bottom: 140px !important;
-        padding-top: 20px !important;
+        padding-bottom: 100px !important;
+        padding-top: 2rem !important;
+        max-width: 1200px !important;
     }
 
     div[data-testid="stChatInput"] {
         box-shadow: 0 -2px 20px rgba(0,0,0,0.08) !important;
         border-radius: 20px !important;
         background-color: white !important;
+        padding: 5px;
     }
     .stChatInputContainer {
         padding-bottom: 20px;
@@ -144,12 +146,13 @@ render("""
         text-align: left;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         font-size: 16px;
+        word-wrap: break-word;
     }
 
     /* BOT (LEFT) */
     .row-bot { justify-content: flex-start; }
-    .bot-container { display: flex; align-items: flex-start; max-width: 80%; }
-    .bot-icon { font-size: 28px; margin-right: 10px; margin-top: 0px; }
+    .bot-container { display: flex; align-items: flex-start; max-width: 85%; }
+    .bot-icon { font-size: 28px; margin-right: 10px; margin-top: 0px; flex-shrink: 0; }
     .bubble-bot {
         background-color: #F8F9FA;
         border: 1px solid #E9ECEF;
@@ -159,6 +162,7 @@ render("""
         width: 100%;
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         font-size: 16px;
+        word-wrap: break-word;
     }
     
     /* Progress Bar Style */
@@ -172,9 +176,28 @@ render("""
         font-size: 0.85rem;
     }
 
-    .stButton button { border: 1px solid #2E8B57; color: #2E8B57; background-color: white; border-radius: 20px; width: 100%; }
+    .stButton button { border: 1px solid #2E8B57; color: #2E8B57; background-color: white; border-radius: 20px; width: 100%; transition: all 0.3s; }
     .stButton button:hover { background-color: #2E8B57; color: white; border-color: #2E8B57; }
-    
+
+    /* --- RESPONSIVE MEDIA QUERIES --- */
+    @media (max-width: 768px) {
+        .nav-header { flex-direction: column; text-align: center; gap: 15px; padding: 15px 10px; }
+        .nav-logo { font-size: 1.5rem; justify-content: center; }
+        .nav-links { flex-direction: column; gap: 10px; }
+        
+        .hero-title { font-size: 2.2rem; }
+        .hero-subtitle { font-size: 1rem; padding: 0 10px; }
+        
+        .bubble-user { max-width: 85%; font-size: 15px; padding: 10px 15px; }
+        .bot-container { max-width: 95%; }
+        .bubble-bot { font-size: 15px; padding: 12px; }
+        .bot-icon { font-size: 24px; }
+        
+        .cta-container { padding: 30px 15px; margin-top: 40px; }
+        .hover-card { padding: 20px 15px; margin-bottom: 15px; }
+        
+        .block-container { padding-bottom: 120px !important; }
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -188,7 +211,13 @@ if current_page == "home":
     render("""<style>section[data-testid="stSidebar"] {display: none;}</style>""", unsafe_allow_html=True)
     
     render("""
-    <div class="nav-header"><div class="nav-logo"><span>🌱</span> PQNK Farming AI</div><div class="nav-links"><a href="/?page=about" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">About Us</a> &nbsp;&nbsp; 🟢 Revolutionizing Agriculture</div></div>
+    <div class="nav-header">
+        <div class="nav-logo"><span>🌱</span> PQNK Farming AI</div>
+        <div class="nav-links">
+            <a href="/?page=about" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">About Us</a>
+            <span style="color:#2E8B57; font-weight:bold;">🟢 Revolutionizing Agriculture</span>
+        </div>
+    </div>
     <div class="hero-section"><div class="mission-badge">Revolutionizing Agriculture with AI</div><div class="hero-title">The Future of Farming Intelligence</div><div class="hero-subtitle">PQNK Farming AI combines cutting-edge AI with agricultural expertise.</div></div>
     """, unsafe_allow_html=True)
     render("<h2 style='text-align: center; color: #333; margin-top: 20px;'>Why Choose PQNK?</h2>", unsafe_allow_html=True)
@@ -221,7 +250,10 @@ elif current_page == "about":
     render("""
     <div class="nav-header">
         <div class="nav-logo"><span>🌱</span> PQNK Farming AI</div>
-        <div class="nav-links"><a href="/?page=home" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/?page=chat" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">Chatbot</a></div>
+        <div class="nav-links">
+            <a href="/?page=home" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">Home</a>
+            <a href="/?page=chat" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">Chatbot</a>
+        </div>
     </div>
     """, unsafe_allow_html=True)
     
