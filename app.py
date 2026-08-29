@@ -178,8 +178,8 @@ render("""
 
     .stButton button, div[data-testid="stLinkButton"] a { 
         border: 2px solid #2E8B57 !important; 
-        color: #2E8B57 !important; 
-        background-color: white !important; 
+        color: #e6f4ea !important; 
+        background-color: #2E8B57 !important; 
         border-radius: 25px !important; 
         width: 100% !important; 
         transition: all 0.3s !important; 
@@ -192,12 +192,13 @@ render("""
     .stButton button p, div[data-testid="stLinkButton"] a p {
         font-size: 1.4rem !important; 
         font-weight: 800 !important;
+        color: #e6f4ea !important;
         margin: 0;
     }
     .stButton button:hover, div[data-testid="stLinkButton"] a:hover { 
-        background-color: #2E8B57 !important; 
+        background-color: #1e633d !important; 
         color: white !important; 
-        border-color: #2E8B57 !important; 
+        border-color: #1e633d !important; 
     }
     .stButton button:hover p, div[data-testid="stLinkButton"] a:hover p {
         color: white !important;
