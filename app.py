@@ -191,31 +191,22 @@ if current_page == "home":
     <div class="nav-header"><div class="nav-logo"><span>🌱</span> PQNK Farming AI</div><div class="nav-links"><a href="/?page=about" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">About Us</a> &nbsp;&nbsp; 🟢 Revolutionizing Agriculture</div></div>
     <div class="hero-section"><div class="mission-badge">Revolutionizing Agriculture with AI</div><div class="hero-title">The Future of Farming Intelligence</div><div class="hero-subtitle">PQNK Farming AI combines cutting-edge AI with agricultural expertise.</div></div>
     """, unsafe_allow_html=True)
+    render("<h2 style='text-align: center; color: #333; margin-top: 20px;'>Why Choose PQNK?</h2>", unsafe_allow_html=True)
+    render("<p style='text-align: center; max-width: 700px; margin: 0 auto; color: #666;'>We combine technology with agriculture to bring actionable insights directly to your fingertips.</p>", unsafe_allow_html=True)
     
-    render("<h2 style='text-align: center; color: #333; margin-top: 20px;'>Our Mission</h2>", unsafe_allow_html=True)
-    render("<p style='text-align: center; max-width: 700px; margin: 0 auto; color: #666;'>To democratize access to advanced agricultural knowledge and empower farmers worldwide.</p>", unsafe_allow_html=True)
-
-    render("<br><br>", unsafe_allow_html=True)
-    render("<h2 style='text-align: center; color: #333;'>Meet The Team</h2>", unsafe_allow_html=True)
-    
-    t1, t2, t3 = st.columns(3)
-    with t1: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍⚕️</div><h3 style="color:#333;">Dr. Mansoor Ebrahim</h3></div>""", unsafe_allow_html=True)
-    with t2: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍💻</div><h3 style="color:#333;">Muzammil Yasir</h3></div>""", unsafe_allow_html=True)
-    with t3: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍💼</div><h3 style="color:#333;">Muhammad Hussain</h3></div>""", unsafe_allow_html=True)
-
     render("<br><br>", unsafe_allow_html=True)
 
     c1, c2, c3 = st.columns(3)
-    with c1: render("""<div class="hover-card"><div style="font-size:2rem; margin-bottom:10px">🧠</div><h3>AI & ML</h3><p style="color:#666;">Advanced RAG systems.</p></div>""", unsafe_allow_html=True)
-    with c2: render("""<div class="hover-card"><div style="font-size:2rem; margin-bottom:10px">💾</div><h3>Data Infrastructure</h3><p style="color:#666;">Scalable databases.</p></div>""", unsafe_allow_html=True)
-    with c3: render("""<div class="hover-card"><div style="font-size:2rem; margin-bottom:10px">🌐</div><h3>Web Technologies</h3><p style="color:#666;">Responsive design.</p></div>""", unsafe_allow_html=True)
+    with c1: render("""<div class="hover-card"><div style="font-size:2rem; margin-bottom:10px">🧠</div><h3>AI-Powered Insights</h3><p style="color:#666;">Get instant, expert answers for your farming needs using our advanced RAG systems.</p></div>""", unsafe_allow_html=True)
+    with c2: render("""<div class="hover-card"><div style="font-size:2rem; margin-bottom:10px">🌱</div><h3>Sustainable Growth</h3><p style="color:#666;">Learn eco-friendly practices that maximize yield while protecting the environment.</p></div>""", unsafe_allow_html=True)
+    with c3: render("""<div class="hover-card"><div style="font-size:2rem; margin-bottom:10px">📈</div><h3>Data-Driven</h3><p style="color:#666;">Make informed decisions backed by a robust and reliable knowledge base.</p></div>""", unsafe_allow_html=True)
 
     render("<br><br>", unsafe_allow_html=True)
-    render("""<h2 style='text-align: center; color: #333;'>What Farmers Say</h2>""", unsafe_allow_html=True)
-    t1, t2, t3 = st.columns(3)
-    with t1: render("""<div class="hover-card"><img src="https://randomuser.me/api/portraits/men/32.jpg" class="testimonial-img"><p><i>"PQNK saved my harvest."</i></p><h4>John D.</h4></div>""", unsafe_allow_html=True)
-    with t2: render("""<div class="hover-card"><img src="https://randomuser.me/api/portraits/women/44.jpg" class="testimonial-img"><p><i>"Reduced fertilizer costs by 20%."</i></p><h4>Maria R.</h4></div>""", unsafe_allow_html=True)
-    with t3: render("""<div class="hover-card"><img src="https://randomuser.me/api/portraits/men/85.jpg" class="testimonial-img"><p><i>"Precision farming at its best."</i></p><h4>Ahmed K.</h4></div>""", unsafe_allow_html=True)
+    
+    render("<h2 style='text-align: center; color: #333;'>How It Works</h2>", unsafe_allow_html=True)
+    render("<p style='text-align: center; max-width: 700px; margin: 0 auto; color: #666;'>Our intelligent chatbot analyzes your queries against a vast library of agricultural data to provide you with the most accurate and up-to-date farming advice.</p>", unsafe_allow_html=True)
+    
+    render("<br><br>", unsafe_allow_html=True)
 
     render("""<div class="cta-container"><h2 style="color: white !important;">Ready to Transform Your Farming?</h2><p style="color: #e6f4ea;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns([1,2,1])
@@ -235,7 +226,7 @@ elif current_page == "about":
     """, unsafe_allow_html=True)
     
     render("<h2 style='text-align: center; color: #333; margin-top: 20px;'>Our Mission</h2>", unsafe_allow_html=True)
-    render("<p style='text-align: center; max-width: 700px; margin: 0 auto; color: #666;'>To democratize access to advanced agricultural knowledge and empower farmers worldwide.</p>", unsafe_allow_html=True)
+    render("<p style='text-align: center; max-width: 800px; margin: 0 auto; color: #666; font-size: 1.1rem; line-height: 1.6;'>To democratize access to advanced agricultural knowledge, integrating cutting-edge Artificial Intelligence with traditional farming practices. We aim to empower farmers worldwide by providing actionable, data-driven insights that promote sustainable agriculture, increase crop yields, and foster environmental stewardship for future generations. By bridging the gap between technology and agriculture, we strive to build a more resilient and food-secure future.</p>", unsafe_allow_html=True)
 
     render("<br><br>", unsafe_allow_html=True)
     render("<h2 style='text-align: center; color: #333;'>Meet The Team</h2>", unsafe_allow_html=True)
@@ -244,6 +235,13 @@ elif current_page == "about":
     with t1: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍⚕️</div><h3 style="color:#333;">Dr. Mansoor Ebrahim</h3></div>""", unsafe_allow_html=True)
     with t2: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍💻</div><h3 style="color:#333;">Muzammil Yasir</h3></div>""", unsafe_allow_html=True)
     with t3: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍💼</div><h3 style="color:#333;">Muhammad Hussain</h3></div>""", unsafe_allow_html=True)
+
+    render("<br>", unsafe_allow_html=True)
+    
+    t4, t5, t6 = st.columns(3)
+    with t4: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👨‍🌾</div><h3 style="color:#333;">Daniyal Memon</h3></div>""", unsafe_allow_html=True)
+    with t5: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👩‍💻</div><h3 style="color:#333;">Tahreem Shahid</h3></div>""", unsafe_allow_html=True)
+    with t6: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👩‍🔬</div><h3 style="color:#333;">Shama ul meen</h3></div>""", unsafe_allow_html=True)
 
     render("""<div class="cta-container" style="margin-top: 80px;"><h2 style="color: white !important;">Ready to Transform Your Farming?</h2><p style="color: #e6f4ea;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns([1,2,1])
