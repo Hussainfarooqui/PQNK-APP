@@ -109,7 +109,7 @@ render("""
     /* Team & Testimonials */
     .testimonial-img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid #2E8B57; }
     .team-avatar { width: 90px; height: 90px; border-radius: 50%; background-color: #eee; margin: 0 auto 15px auto; object-fit: cover; }
-    .cta-container { background-color: #2E8B57; border-radius: 20px; padding: 50px 20px; text-align: center; color: white; margin-top: 60px; margin-bottom: 40px; }
+    .cta-container { background-color: #e6f4ea; border-radius: 20px; padding: 50px 20px; text-align: center; color: #2E8B57; margin-top: 60px; margin-bottom: 40px; }
 
     /* --- CHAT SPECIFIC STYLES --- */
     .block-container {
@@ -262,7 +262,7 @@ if current_page == "home":
     
     render("<br><br>", unsafe_allow_html=True)
 
-    render("""<div class="cta-container"><h2 style="color: white !important;">Ready to Transform Your Farming?</h2><p style="color: #e6f4ea;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
+    render("""<div class="cta-container"><h2 style="color: #2E8B57 !important;">Ready to Transform Your Farming?</h2><p style="color: #2E8B57; font-weight: 500;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns([1,2,1])
     with c2: st.link_button("Start Chatting Now ", url="/?page=chat", type="primary", use_container_width=True)
 
@@ -300,7 +300,7 @@ elif current_page == "about":
     with t5: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👩‍💻</div><h3 style="color:#333;">Tahreem Shahid</h3></div>""", unsafe_allow_html=True)
     with t6: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👩‍🔬</div><h3 style="color:#333;">Shama ul meen</h3></div>""", unsafe_allow_html=True)
 
-    render("""<div class="cta-container" style="margin-top: 80px;"><h2 style="color: white !important;">Ready to Transform Your Farming?</h2><p style="color: #e6f4ea;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
+    render("""<div class="cta-container" style="margin-top: 80px;"><h2 style="color: #2E8B57 !important;">Ready to Transform Your Farming?</h2><p style="color: #2E8B57; font-weight: 500;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns([1,2,1])
     with c2: st.link_button("Start Chatting Now 🚀", url="/?page=chat", type="primary", use_container_width=True)
 
