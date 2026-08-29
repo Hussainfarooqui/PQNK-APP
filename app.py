@@ -176,8 +176,32 @@ render("""
         font-size: 0.85rem;
     }
 
-    .stButton button { border: 1px solid #2E8B57; color: #2E8B57; background-color: white; border-radius: 20px; width: 100%; transition: all 0.3s; }
-    .stButton button:hover { background-color: #2E8B57; color: white; border-color: #2E8B57; }
+    .stButton button, div[data-testid="stLinkButton"] a { 
+        border: 2px solid #2E8B57 !important; 
+        color: #2E8B57 !important; 
+        background-color: white !important; 
+        border-radius: 25px !important; 
+        width: 100% !important; 
+        transition: all 0.3s !important; 
+        padding: 15px 30px !important;
+        text-align: center;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .stButton button p, div[data-testid="stLinkButton"] a p {
+        font-size: 1.4rem !important; 
+        font-weight: 800 !important;
+        margin: 0;
+    }
+    .stButton button:hover, div[data-testid="stLinkButton"] a:hover { 
+        background-color: #2E8B57 !important; 
+        color: white !important; 
+        border-color: #2E8B57 !important; 
+    }
+    .stButton button:hover p, div[data-testid="stLinkButton"] a:hover p {
+        color: white !important;
+    }
 
     /* --- RESPONSIVE MEDIA QUERIES --- */
     @media (max-width: 768px) {
@@ -239,7 +263,7 @@ if current_page == "home":
 
     render("""<div class="cta-container"><h2 style="color: white !important;">Ready to Transform Your Farming?</h2><p style="color: #e6f4ea;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns([1,2,1])
-    with c2: st.link_button("Start Chatting Now 🚀", url="/?page=chat", type="primary", use_container_width=True)
+    with c2: st.link_button("Start Chatting Now ", url="/?page=chat", type="primary", use_container_width=True)
 
 # ==================================================
 # PAGE 2: ABOUT US
