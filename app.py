@@ -239,13 +239,19 @@ if current_page == "home":
     <div class="nav-header">
         <div class="nav-logo"><span>🌱</span> PQNK Farming AI</div>
         <div class="nav-links">
-            <a href="/?page=about" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">About Us</a>
+            <a href="/?page=chat" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">Chatbot</a>
             <span style="color:#2E8B57; font-weight:bold;">🟢 Revolutionizing Agriculture</span>
         </div>
     </div>
     <div class="hero-section"><div class="mission-badge">Revolutionizing Agriculture with AI</div><div class="hero-title">The Future of Farming Intelligence</div><div class="hero-subtitle">PQNK Farming AI combines cutting-edge AI with agricultural expertise.</div></div>
     """, unsafe_allow_html=True)
-    render("<h2 style='text-align: center; color: #333; margin-top: 20px;'>Why Choose PQNK?</h2>", unsafe_allow_html=True)
+    
+    render("<h2 style='text-align: center; color: #333; margin-top: 20px;'>Our Mission</h2>", unsafe_allow_html=True)
+    render("<p style='text-align: center; max-width: 800px; margin: 0 auto; color: #666; font-size: 1.1rem; line-height: 1.6;'>To democratize access to advanced agricultural knowledge, integrating cutting-edge Artificial Intelligence with traditional farming practices. We aim to empower farmers worldwide by providing actionable, data-driven insights that promote sustainable agriculture, increase crop yields, and foster environmental stewardship for future generations. By bridging the gap between technology and agriculture, we strive to build a more resilient and food-secure future.</p>", unsafe_allow_html=True)
+
+    render("<br><br>", unsafe_allow_html=True)
+    
+    render("<h2 style='text-align: center; color: #333;'>Why Choose PQNK?</h2>", unsafe_allow_html=True)
     render("<p style='text-align: center; max-width: 700px; margin: 0 auto; color: #666;'>We combine technology with agriculture to bring actionable insights directly to your fingertips.</p>", unsafe_allow_html=True)
     
     render("<br><br>", unsafe_allow_html=True)
@@ -261,31 +267,7 @@ if current_page == "home":
     render("<p style='text-align: center; max-width: 700px; margin: 0 auto; color: #666;'>Our intelligent chatbot analyzes your queries against a vast library of agricultural data to provide you with the most accurate and up-to-date farming advice.</p>", unsafe_allow_html=True)
     
     render("<br><br>", unsafe_allow_html=True)
-
-    render("""<div class="cta-container"><h2 style="color: #2E8B57 !important;">Ready to Transform Your Farming?</h2><p style="color: #2E8B57; font-weight: 500;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
-    c1, c2, c3 = st.columns([1,2,1])
-    with c2: st.link_button("Start Chatting Now ", url="/?page=chat", type="primary", use_container_width=True)
-
-# ==================================================
-# PAGE 2: ABOUT US
-# ==================================================
-elif current_page == "about":
-    render("""<style>section[data-testid="stSidebar"] {display: none;}</style>""", unsafe_allow_html=True)
     
-    render("""
-    <div class="nav-header">
-        <div class="nav-logo"><span>🌱</span> PQNK Farming AI</div>
-        <div class="nav-links">
-            <a href="/?page=home" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">Home</a>
-            <a href="/?page=chat" target="_self" style="text-decoration:none; color:#555; font-weight:bold;">Chatbot</a>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    render("<h2 style='text-align: center; color: #333; margin-top: 20px;'>Our Mission</h2>", unsafe_allow_html=True)
-    render("<p style='text-align: center; max-width: 800px; margin: 0 auto; color: #666; font-size: 1.1rem; line-height: 1.6;'>To democratize access to advanced agricultural knowledge, integrating cutting-edge Artificial Intelligence with traditional farming practices. We aim to empower farmers worldwide by providing actionable, data-driven insights that promote sustainable agriculture, increase crop yields, and foster environmental stewardship for future generations. By bridging the gap between technology and agriculture, we strive to build a more resilient and food-secure future.</p>", unsafe_allow_html=True)
-
-    render("<br><br>", unsafe_allow_html=True)
     render("<h2 style='text-align: center; color: #333;'>Meet The Team</h2>", unsafe_allow_html=True)
     
     t1, t2, t3 = st.columns(3)
@@ -300,12 +282,12 @@ elif current_page == "about":
     with t5: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👩‍💻</div><h3 style="color:#333;">Tahreem Shahid</h3></div>""", unsafe_allow_html=True)
     with t6: render("""<div class="hover-card"><div class="team-avatar" style="display:flex; align-items:center; justify-content:center; font-size:2.5rem; background-color:#e6f4ea; color:#2E8B57;">👩‍🔬</div><h3 style="color:#333;">Shama ul meen</h3></div>""", unsafe_allow_html=True)
 
-    render("""<div class="cta-container" style="margin-top: 80px;"><h2 style="color: #2E8B57 !important;">Ready to Transform Your Farming?</h2><p style="color: #2E8B57; font-weight: 500;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
+    render("""<div class="cta-container"><h2 style="color: #2E8B57 !important;">Ready to Transform Your Farming?</h2><p style="color: #2E8B57; font-weight: 500;">Join thousands of farmers today.</p></div>""", unsafe_allow_html=True)
     c1, c2, c3 = st.columns([1,2,1])
-    with c2: st.link_button("Start Chatting Now 🚀", url="/?page=chat", type="primary", use_container_width=True)
+    with c2: st.link_button("Start Chatting Now ", url="/?page=chat", type="primary", use_container_width=True)
 
 # ==================================================
-# PAGE 3: CHATBOT INTERFACE
+# PAGE 2: CHATBOT INTERFACE
 # ==================================================
 elif current_page == "chat":
     
